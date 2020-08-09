@@ -1,0 +1,9 @@
+<h2 i18n>Notes</h2>
+<div id="wrapper">
+    <div   class="card" *ngFor="let note of notes| async" (click)="editNote(note.id)">
+      <h3>{{ note.title |slice:0:30}}</h3>
+      <p id="date"> {{ note.date | date }}</p>
+      <p>{{ note.text | truncate: 100}}</p>
+      <button i18n (click)="deleteNote(note.id, $event)">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<form  #myForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input i18n-placeholder placeholder="Title" type="text" class="form-control" [(ngModel)]="updNote.title"  id="title" required  name="title">
+    </div>
+
+    <div class="form-group">
+        <textarea i18n-placeholder placeholder="text" required [(ngModel)]="updNote.text" name ="text" rows="10" ></textarea>
+    </div>
+  
+    <button i18 ntype="submit" class="btn-success">Submit</button>
+    <button i18n routerLink="" class="btn-cancel">Cancel</button>
+  </form>
